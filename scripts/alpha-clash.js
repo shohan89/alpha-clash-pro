@@ -1,5 +1,11 @@
 function continueGame(){
     const alphabets = getRandomAlphabet();
+    // set random alphabet to the screen
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabets;
+
+    // set background color
+    setBackgroundColorById(alphabets);
     
 }
 
