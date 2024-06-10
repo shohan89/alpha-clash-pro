@@ -1,3 +1,9 @@
+function handleKeyboardButtonPress(){
+    console.log('button pressed');
+}
+
+document.addEventListener('keyup', handleKeyboardButtonPress);
+
 function continueGame(){
     const alphabets = getRandomAlphabet();
     // set random alphabet to the screen
