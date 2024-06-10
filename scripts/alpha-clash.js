@@ -1,5 +1,20 @@
-function handleKeyboardButtonPress(){
-    console.log('button pressed');
+function handleKeyboardButtonPress(event){
+    const playerPressed = event.key;
+    console.log('Player pressed: ', playerPressed);
+
+    // get the expected
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed, expectedAlphabet);
+
+    // check match or not
+    if( playerPressed === expectedAlphabet ){
+        console.log('You have got a point!!');
+    }
+    else{
+        console.log('You lost a life!!!');
+    }
 }
 
 document.addEventListener('keyup', handleKeyboardButtonPress);
