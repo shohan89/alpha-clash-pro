@@ -11,6 +11,8 @@ function handleKeyboardButtonPress(event){
     // check match or not
     if( playerPressed === expectedAlphabet ){
         console.log('You have got a point!!');
+        removeBackgroundColorById(expectedAlphabet);
+        continueGame();
     }
     else{
         console.log('You lost a life!!!');
