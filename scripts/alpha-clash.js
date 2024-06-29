@@ -29,6 +29,10 @@ function handleKeyboardButtonPress(event){
         const newLife = currentLife - 1;
 
         currentLifeElement.innerText = newLife;
+
+        if( newLife === 0 ){
+            gameOver();
+        }
     }
 }
 
@@ -50,8 +54,14 @@ function continueGame(){
 function play(){
     // Getting the home section and hide it
     hideElementById('home-screen');
-
     // Showing the play ground section
     showElementById('play-ground');
+    // Getting the final score and hide it for starting
+    hideElementById('final-score');
+    
     continueGame();
+}
+function gameOver(){
+    hideElementById('play-ground');
+    showElementById('final-score');
 }
